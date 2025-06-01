@@ -1,0 +1,239 @@
+/* Custom theme styles */
+
+header {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  gap: 1rem;
+}
+
+.nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.btn-outline-dark {
+  border-color: var(--text-color);
+  color: var(--text-color);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.sidebar {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.widget {
+  margin-bottom: 2rem;
+}
+
+.widget-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: #212529;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* WooCommerce Product Grid */
+.woocommerce ul.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.woocommerce ul.products li.product {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+}
+
+@media (max-width: 768px) {
+  .woocommerce ul.products li.product {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Product Cards */
+.woocommerce ul.products li.product .card {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.woocommerce ul.products li.product .card:hover {
+  transform: translateY(-4px);
+}
+
+/* Product Titles */
+.woocommerce ul.products li.product .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Price */
+.woocommerce ul.products li.product .price {
+  color: var(--text-color);
+}
+
+/* Add to Cart Button */
+.woocommerce ul.products li.product .button {
+  margin-top: auto;
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.woocommerce ul.products li.product .button:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Sale Badge */
+.woocommerce span.onsale {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+/* Buttons */
+.woocommerce button,
+.woocommerce a.button,
+.woocommerce input.button {
+  @apply btn btn-outline-dark;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.woocommerce a.button:hover,
+.woocommerce input.button:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Blog Post Titles */
+.entry-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.entry-title a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.entry-title a:hover {
+  text-decoration: underline;
+  color: #0d6efd; /* Bootstrap primary color */
+}
+
+/* Single product layout */
+.product-summary {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.woocommerce div.product .product_title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.woocommerce div.product .price {
+  font-size: 1.5rem;
+  color: #198754; /* Bootstrap green */
+  margin-bottom: 1rem;
+}
+
+.woocommerce div.product form.cart {
+  margin-top: 1.5rem;
+}
+
+.woocommerce div.product .woocommerce-tabs {
+  margin-top: 3rem;
+}
+
+.woocommerce div.product .woocommerce-tabs h2,
+.woocommerce div.product .woocommerce-tabs .panel h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel {
+  padding-top: 1rem;
+}
+
+.woocommerce div.product .woocommerce-review-link {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Buttons */
+.woocommerce button.button,
+.woocommerce a.button,
+.woocommerce input.button {
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  border-radius: 4px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.woocommerce button.button:hover,
+.woocommerce a.button:hover,
+.woocommerce input.button:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Star rating */
+.woocommerce .star-rating span:before {
+  color: #ffc107; /* Bootstrap yellow for stars */
+}
