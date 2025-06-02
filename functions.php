@@ -69,6 +69,3 @@ function my_widgets_init() {
     ));
 }
 add_action('widgets_init', 'my_widgets_init');
-
-// Optional: WooCommerce tweaks - disable default styles
-add_filter('woocommerce_enqueue_styles', '__return_false');
